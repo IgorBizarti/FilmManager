@@ -40,45 +40,5 @@ public class FilmManager {
         return tmp;
     }
 
-    public String[] addUnderLimit() {
-        int resultLength;
-        if (films.length < limit) {
-            resultLength = films.length;
-        } else {
-            resultLength = limit;
-        }
-        String[] tmp = new String[resultLength];
-        for (int i = 0; i < films.length; i++) {
-            tmp[i] = films[i];
-        }
-        return tmp;
-    }
 
-    public String[] addAboveLimit() {
-        int resultLength;
-        if (films.length > limit) {
-            resultLength = films.length;
-        } else {
-            resultLength = limit;
-        }
-        String[] tmp = new String[resultLength];
-        for (int i = 0; i < films.length; i++) {
-            tmp[i] = films[i];
-        }
-        return tmp;
-    }
-
-    public String[] saveEqualLimit() {
-        int resultLength;
-        if (films.length == limit) {
-            resultLength = films.length;
-        } else {
-            resultLength = limit;
-        }
-        String[] tmp = new String[resultLength];
-        for (int i = 0; i < films.length; i++) {
-            tmp[i] = films[i];
-        }
-        return tmp;
-    }
 }
