@@ -1,4 +1,5 @@
 package ru.Netology.manager;
+
 public class FilmManager {
     private String[] films = new String[0];
     private int limit;
@@ -6,6 +7,7 @@ public class FilmManager {
     public FilmManager(int limit) {
         this.limit = limit;
     }
+
     public FilmManager() {
         this.limit = 10;
     }
@@ -34,6 +36,48 @@ public class FilmManager {
         String[] tmp = new String[resultLength];
         for (int i = 0; i < films.length; i++) {
             tmp[i] = films[films.length - 1 - i];
+        }
+        return tmp;
+    }
+
+    public String[] addUnderLimit() {
+        int resultLength;
+        if (films.length < limit) {
+            resultLength = films.length;
+        } else {
+            resultLength = limit;
+        }
+        String[] tmp = new String[resultLength];
+        for (int i = 0; i < films.length; i++) {
+            tmp[i] = films[i];
+        }
+        return tmp;
+    }
+
+    public String[] addAboveLimit() {
+        int resultLength;
+        if (films.length > limit) {
+            resultLength = films.length;
+        } else {
+            resultLength = limit;
+        }
+        String[] tmp = new String[resultLength];
+        for (int i = 0; i < films.length; i++) {
+            tmp[i] = films[i];
+        }
+        return tmp;
+    }
+
+    public String[] saveEqualLimit() {
+        int resultLength;
+        if (films.length == limit) {
+            resultLength = films.length;
+        } else {
+            resultLength = limit;
+        }
+        String[] tmp = new String[resultLength];
+        for (int i = 0; i < films.length; i++) {
+            tmp[i] = films[i];
         }
         return tmp;
     }
