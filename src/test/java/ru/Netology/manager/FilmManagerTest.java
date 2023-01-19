@@ -45,7 +45,7 @@ public class FilmManagerTest {
     }
 
     @Test
-    void addUnderLimit() {
+    void findLustUnderLimit() {
         String film1 = "Matrix";
         String film2 = "Home Alone";
         String film3 = "GodzilLa";
@@ -60,8 +60,8 @@ public class FilmManagerTest {
         manager.addNewFilm(film4);
         manager.addNewFilm(film5);
 
-        String[] expected = {film1, film2, film3, film4, film5};
-        String[] actual = manager.findAll();
+        String[] expected = {film5, film4, film3, film2, film1};
+        String[] actual = manager.findLast2();
 
         Assertions.assertArrayEquals(expected, actual);
 
@@ -95,8 +95,8 @@ public class FilmManagerTest {
         manager.addNewFilm(film10);
         manager.addNewFilm(film11);
 
-        String[] expected = {film1, film2, film3, film4, film5, film6, film7, film8, film9, film10, film11};
-        String[] actual = manager.findAll();
+        String[] expected = {film11, film10, film9, film8, film7, film6, film5, film4, film3, film2, film1};
+        String[] actual = manager.findLast3();
 
         Assertions.assertArrayEquals(expected, actual);
     }
@@ -127,10 +127,10 @@ public class FilmManagerTest {
         manager.addNewFilm(film9);
         manager.addNewFilm(film10);
 
-        String[] expected = {film1, film2, film3, film4,film5, film6, film7, film8, film9, film10};
-        String[] actual = manager.findAll();
+        String[] expected = {film10, film9, film8, film7, film6, film5, film4, film3, film2, film1};
+        String[] actual = manager.findLast4();
 
         Assertions.assertArrayEquals(expected, actual);
-    }
 
+    }
 }
