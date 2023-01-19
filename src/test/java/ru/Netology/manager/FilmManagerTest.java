@@ -51,7 +51,7 @@ public class FilmManagerTest {
         String film2 = "Home Alone";
         String film3 = "GodzilLa";
         String film4 = "Titanic";
-        FilmManager manager = new FilmManager(4);
+        FilmManager manager = new FilmManager(10);
 
         manager.addNewFilm(film1);
         manager.addNewFilm(film2);
