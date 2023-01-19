@@ -45,7 +45,7 @@ public class FilmManagerTest {
     }
 
     @Test
-    public void LastEqualsLimit() { //Когда столько же//
+    public void LastEqualsLimit() {                           //Когда столько же//
 
         String film1 = "Matrix";
         String film2 = "Home Alone";
@@ -66,7 +66,7 @@ public class FilmManagerTest {
     }
 
     @Test
-    public void GetLastUpperLimit() { ////Когда больше чем лимит//
+    public void GetLastUpperLimit() {                          //Когда больше чем лимит//
         String film1 = "Matrix";
         String film2 = "Home Alone";
         String film3 = "GodzilLa";
@@ -84,7 +84,7 @@ public class FilmManagerTest {
     }
 
     @Test
-    public void GetLastUnderLimit() { //Когда меньше чем лимит//
+    public void GetLastUnderLimit() {                             //Когда меньше чем лимит//
         String film1 = "Matrix";
         String film2 = "Home Alone";
         String film3 = "GodzilLa";
