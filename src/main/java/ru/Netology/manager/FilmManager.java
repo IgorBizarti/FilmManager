@@ -41,14 +41,7 @@ public class FilmManager {
     }
 
     public String[] findLast2() { //меньше чем лимит
-        int resultLength;
-        if (films.length < limit) {
-            resultLength = films.length;
-        } else {
-            resultLength = limit;
-        }
-
-        String[] tmp = new String[resultLength];
+        String[] tmp = new String[5];
         for (int i = 0; i < films.length; i++) {
             tmp[i] = films[films.length - 1 - i];
         }
@@ -57,13 +50,7 @@ public class FilmManager {
     }
 
     public String[] findLast3() { // больше чем лимит
-        int resultLength;
-        if (films.length > limit) {
-            resultLength = films.length;
-        } else {
-            resultLength = limit;
-        }
-        String[] tmp = new String[resultLength];
+        String[] tmp = new String[11];
         for (int i = 0; i < films.length; i++) {
             tmp[i] = films[films.length - 1 - i];
         }
@@ -71,13 +58,7 @@ public class FilmManager {
     }
 
     public String[] findLast4() { // равно
-        int resultLength;
-        if (films.length == limit) {
-            resultLength = films.length;
-        } else {
-            resultLength = limit;
-        }
-        String[] tmp = new String[resultLength];
+        String[] tmp = new String[10];
         for (int i = 0; i < films.length; i++) {
             tmp[i] = films[films.length - 1 - i];
         }
