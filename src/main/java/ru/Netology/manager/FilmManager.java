@@ -35,6 +35,7 @@ public class FilmManager {
         }
         String[] tmp = new String[resultLength];
         for (int i = 0; i < films.length; i++) {
+            if (i >= limit) break;
             tmp[i] = films[films.length - 1 - i];
         }
         return tmp;
